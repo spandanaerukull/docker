@@ -2,13 +2,18 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: roboshop
-  region: us-west-1
+  name: roboshop  #cluster name 
+  region: us-east-1
 
   managedNodeGroups:
     - name: roboshop
-      instanceType: ["m5.large", "c3.large", "c4.large", "c5.large"]
+      instanceType: ["m5.large", "c3.large", "c4.large", "c5.large"] #ec2 instance types
       desiredCapacity: 3
       spot: true
 
-      
+    #  # This configuration file is for creating an EKS cluster named "roboshop"
+    # with a managed node group.
+    #  # The node group will consist of EC2 instances of types m5.large, c3.large, c4.large, and c5.large.
+    #  # The desired capacity of the node group is set to 3, meaning it will have 3 nodes.
+    #  # The instances will be spot instances, which can help reduce costs.  
+    #  # You can use this configuration file with the eksctl command-line tool to create the cluster.
