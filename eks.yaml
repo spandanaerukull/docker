@@ -3,7 +3,7 @@ kind: ClusterConfig
 
 metadata:
   name: roboshop  #cluster name 
-  region: us-east-1
+  region: us-east-1a  #aws region
 
   managedNodeGroups:
     - name: roboshop
