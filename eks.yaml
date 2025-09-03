@@ -5,11 +5,11 @@ metadata:
   name: roboshop  #cluster name 
   region: us-east-1  #aws region
 
-  nodeGroups:
-    - name: roboshop
-      instanceTypes: ["m5.large", "c3.large", "c4.large", "c5.large"] #ec2 instance types
-      desiredCapacity: 3
-      spot: true
+managedNodeGroups:
+  - name: roboshop
+    instanceTypes: ["m5.large", "c3.large", "c4.large", "c5.large"] #ec2 instance types
+    desiredCapacity: 3
+    spot: true
 
     #  # This configuration file is for creating an EKS cluster named "roboshop"
     # with a managed node group.
