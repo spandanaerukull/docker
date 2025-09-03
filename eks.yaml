@@ -5,7 +5,7 @@ metadata:
   name: roboshop  #cluster name 
   region: us-east-1  #aws region
 
-  managedNodeGroups:
+  nodeGroups:
     - name: roboshop
       instanceTypes: ["m5.large", "c3.large", "c4.large", "c5.large"] #ec2 instance types
       desiredCapacity: 3
