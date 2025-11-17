@@ -8,8 +8,10 @@ resource "aws_instance" "docker" {
     volume_size = 50
     volume_type = "gp3" # or "gp2", depending on your preference
   }
-  user_data = file("docker.sh")
+
+  user_data = file("docker.sh") # install docker
   #iam_instance_profile = "TerraformAdmin"
+
   tags = {
      Name = "${var.project}-${var.environment}-docker"
   }
@@ -35,8 +37,8 @@ resource "aws_security_group" "allow_all_docker" {
     }
 
     lifecycle {
-      create_before_destroy = true
-    }
+      create_before_destroy = true # to avoid downtime
+    } 
 
     tags = {
         Name = "allow-all-docker"
